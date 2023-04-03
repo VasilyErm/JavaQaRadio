@@ -14,7 +14,7 @@ public class Radio {
         if (radioStation != 0) {
             radioStation--;
         } else {
-            radioStation = 0;
+            radioStation = 9;
         }
     }
 
@@ -30,7 +30,7 @@ public class Radio {
         if (currentVolume != 0) {
             currentVolume--;
         } else {
-            currentVolume = 0;
+            currentVolume = 100;
         }
     }
 

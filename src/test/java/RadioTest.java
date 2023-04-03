@@ -153,7 +153,7 @@ class RadioTest {
         Radio radio = new Radio();
         radio.setRadioStation(0);
         radio.previousStation();
-        int expected = 0;
+        int expected = 9;
         int actual = radio.getRadioStation();
 
         Assertions.assertEquals(expected, actual);
@@ -318,7 +318,7 @@ class RadioTest {
         Radio volume = new Radio();
         volume.setCurrentVolume(0);
         volume.turnDownVolume();
-        int expected = 0;
+        int expected = 100;
         int actual = volume.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
