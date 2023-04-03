@@ -169,6 +169,7 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void CurrentVolumeLimitValues5() {
         Radio volume = new Radio();
@@ -229,6 +230,50 @@ class RadioTest {
         Radio volume = new Radio();
         volume.setCurrentVolume(100);
         volume.nextVolume();
+        int expected = 0;
+        int actual = volume.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void turnDownVolume1() {
+        Radio volume = new Radio();
+        volume.setCurrentVolume(100);
+        volume.turnDownVolume();
+        int expected = 99;
+        int actual = volume.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void turnDownVolume2() {
+        Radio volume = new Radio();
+        volume.setCurrentVolume(50);
+        volume.turnDownVolume();
+        int expected = 49;
+        int actual = volume.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void turnDownVolume3() {
+        Radio volume = new Radio();
+        volume.setCurrentVolume(1);
+        volume.turnDownVolume();
+        int expected = 0;
+        int actual = volume.getCurrentVolume();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void turnDownVolume4() {
+        Radio volume = new Radio();
+        volume.setCurrentVolume(0);
+        volume.turnDownVolume();
         int expected = 0;
         int actual = volume.getCurrentVolume();
 
