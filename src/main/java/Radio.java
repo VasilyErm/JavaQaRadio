@@ -10,6 +10,14 @@ public class Radio {
         }
     }
 
+    public void previousStation() {
+        if (radioStation != 0) {
+            radioStation--;
+        } else {
+            radioStation = 0;
+        }
+    }
+
     public void nextVolume() {
         if (currentVolume != 100) {
             currentVolume++;
